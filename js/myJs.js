@@ -99,23 +99,10 @@ $(document).ready(function () {
   });
 
   // generate text in input
-  function textGenerate() {
-    var n = "";
-    var text = " " + textConfig.text9;
-    var a = Array.from(text);
-    var textVal = $("#txtReason").val() ? $("#txtReason").val() : "";
-    var count = textVal.length;
-    if (count > 0) {
-      for (let i = 1; i <= count; i++) {
-        n = n + a[i];
-        if (i == text.length + 1) {
-          $("#txtReason").val("");
-          n = "";
-          break;
-        }
-      }
-    }
-    $("#txtReason").val(n);
+  function loopImage() {
+    index++;
+    if(index > 9) index = 0;
+    document.getElementById("img").src = imageConfig[index]
   }
 
   // show popup
@@ -131,6 +118,9 @@ $(document).ready(function () {
     about1.style.color = 'pink';
     let about2 = document.getElementById("text4");
     about2.style.color = 'pink';
+    setInterval(() => {
+      loopImage()
+    }, 2000);
   });
   // show popup
   $("#next").click(function () {
@@ -197,7 +187,13 @@ $(document).ready(function () {
     
     if(e.target.value.toLowerCase() == 'my crush'){
       $("#title-login").html('Happy Birthday ' + e.target.value+'<br>Best wish for you <3');
+      let about9 = document.getElementById("title-login");
+      about9.style.color = 'pink';
+      about9.style.fontSize = '35px'
     }else{
+      let about9 = document.getElementById("title-login");
+      about9.style.color = 'black';
+      about9.style.fontSize = '25px'
       $("#title-login").html('Happy Birthday ' + e.target.value);
     }
   });
