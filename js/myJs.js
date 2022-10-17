@@ -48,6 +48,7 @@ $(document).ready(function () {
 
   function firstQuestion() {
     $(".content").hide();
+    $(".cover-login").hide();
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
@@ -57,7 +58,7 @@ $(document).ready(function () {
       background: '#fff url("img/iput-bg.jpg")',
       imageAlt: "Custom image",
     }).then(function () {
-      $(".content").show(200);
+      $(".cover-login").show(200);
     });
   }
 
@@ -173,7 +174,7 @@ $(document).ready(function () {
    }
 
    if(iStatus == 4){
-    text = text + ' <br>Hỏi cho vui vậy thôi chứ a tự công nhận là nhạt thật! Nhạt nhưng bù lại được cái anh học nhanh lắm nha, a biết Search Google này:<br>"Yêu, nhất định phải gặp đúng người thì hạnh phúc mới trọn vẹn. Giống như cây cối, phải đợi đến mùa xuân mới có thể nảy lộc đâm chồi." <br>Câu này là Google nó bảo vậy, nhưng nó phải ở giai đoạn sau. Còn bây giờ a chỉ có ước mơ muốn mời đc e đi ăn thuiiii.<br>Nay hoặc mai hoặc ngày kia cho a được mời e đi ăn nhó!(Trả lời bằng cách click vào button phía trên kia ha!)'
+    text = text + ' <br>Hỏi cho vui vậy thôi chứ a tự công nhận là nhạt thật! Nhạt nhưng bù lại được cái anh học nhanh lắm nha, a biết Search Google này:<br>"Yêu, nhất định phải gặp đúng người thì hạnh phúc mới trọn vẹn. Giống như cây cối, phải đợi đến mùa xuân mới có thể nảy lộc đâm chồi." <br>Câu này là Google nó bảo vậy, nhưng nó phải ở giai đoạn sau. Còn bây giờ a chỉ có ước mơ muốn mời đc e đi ăn thuiiii.<br>Nay hoặc mai hoặc ngày kia cho a được mời e đi ăn nhó!(Trả lời bằng cách click vào button phía trên kia ha - <span style="color:pink">Em chỉ cần cho a cơ hội - Còn cả thế giới cứ để a lo nha</span>)'
     $("#text13").html(text);
     iStatus++;
     $("#status").html('')
@@ -186,5 +187,24 @@ $(document).ready(function () {
     alert('Đáp án sai rùi! Chọn lại chị ơi! Nhạt-quá nhạt!')
     $("#no-status").html('')
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
+  });
+
+  $(document).on('input', '.username', function(e){
+    
+    if(e.target.value.toLowerCase() == 'my crush'){
+      $("#title-login").html('Happy Birthday ' + e.target.value+'<br>Best wish for you <3');
+    }else{
+      $("#title-login").html('Happy Birthday ' + e.target.value);
+    }
+  });
+  $("#submit").click(function () {
+   let username = document.getElementById('username').value;
+   let password = document.getElementById('password').value; 
+   if(username.toLowerCase() == 'my crush' && password.toLowerCase() == 'happybirthday'){
+    $(".content").show();
+    $(".cover-login").hide();
+   }else{
+    alert('Điền đúng mới vào được bạn ưiiii :v')
+   }
   });
 });
