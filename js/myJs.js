@@ -19,11 +19,11 @@ const imageConfig = [
   'https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/305571564_200283055754038_581949479096944282_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=p9ZU0X3nXHEAX_p62EQ&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-2.fna&oh=00_AT-ZnGw9yn_2kWH0Pr8RD_6ScgDqrEN6ge2YTW1homJ-Kg&oe=63507B9B',
   'https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/299147901_194002643048746_2170957377312600884_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tkqanHjDmBIAX8db4Um&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8DVe1W5_6YfIBDOjtef4JyANzBBosf1erSVqVPMeUreA&oe=6350EDB1',
   'https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/297881189_191696953279315_2185894982705182956_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=EUDwZeQeReMAX9ehtoW&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8LL9G1Pa7SsaXG-kZ9vMjQmDg9LpC-jmjaFb8D0s10jg&oe=634FF833',
-  '../img/img5.bmp',
-  '../img/img6.bmp',
-  '../img/img7.bmp',
-  '../img/img8.bmp',
-  '../img/img9.bmp',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img5.bmp',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img6.bmp',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img7.bmp',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img8.bmp',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img9.bmp',
   ]
 let index = 0, text = 'Lần đầu anh gặp Em là 6 giờ 20p(độ lệch chuẩn 5p) ngày 10/10/2022 Xinh thực sự! Nhưng anh nghĩ là xinh như vậy kiểu gì cũng có người iêu ròi. Sau khi nghe quả giới thiệu song thì! thực sự để mà nói là không biết đây có phải là bước đầu của sự tuyệt vời mà ô trời gửi tặng tui không!(Vui hết sức).';
 let iStatus= 0;
