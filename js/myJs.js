@@ -127,6 +127,10 @@ $(document).ready(function () {
     $("#options").hide()
     let about = document.getElementById("text13");
     about.style.color = 'pink';
+    let about1 = document.getElementById("text3");
+    about1.style.color = 'pink';
+    let about2 = document.getElementById("text4");
+    about2.style.color = 'pink';
   });
   // show popup
   $("#next").click(function () {
