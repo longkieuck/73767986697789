@@ -25,7 +25,7 @@ const imageConfig = [
   'https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/302200911_3140880289575522_7397034184281682250_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=8dhkd8P1mRYAX-OhjOD&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-8.fna&oh=00_AfBE053ZAb_BjYenn28t2P8soUFkk8LvjXGHN6GHZiHIcQ&oe=636DCA92',
   'https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/307327959_3147631135567104_4817136633695905969_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=_wsOxQSm9C4AX99xrfU&_nc_ht=scontent.fhan5-8.fna&oh=00_AfCSG0nsIhDt-HJwJZvrunutkY9VmcrsDTC-P4BGi4jFOA&oe=636D5978',
   ]
-let index = 0, text = 'Lần đầu anh gặp Em là 6 giờ 20p(độ lệch chuẩn 5p) ngày 10/10/2022 Xinh thực sự! Nhưng anh nghĩ là xinh như vậy kiểu gì cũng có người iêu ròi. Sau khi nghe quả giới thiệu song thì! thực sự để mà nói là không biết đây có phải là bước đầu của sự tuyệt vời mà ô trời gửi tặng tui không!(Vui hết sức).';
+let index = 0, text = 'Vào chiều ngày 29/10/2022, chẳng hiểu đi lạc kiểu gì anh lại lạc ngay vào sân bóng. Chẳng hiểu có một cơn nắng nào đó lỡ va vào mắt làm anh say mất tiêu luôn. Xinh thực sự! Nhưng anh nghĩ là xinh như vậy kiểu gì cũng có người iêu ròi. Sau khi nhờ quân sư Thuỷ hỏi giúp thìiii! thực sự để mà nói là không biết đây có phải là bước đầu của sự tuyệt vời mà ô trời gửi tặng anh không!(Vui hết sức).';
 let iStatus= 0;
 $(document).ready(function () {
   // process bar
@@ -39,7 +39,8 @@ $(document).ready(function () {
   }, 600);
   
   $("#text3").html(textConfig.text3);
-
+  $("#no").html(textConfig.text5);
+  $("#yes").html(textConfig.text6);
   function firstQuestion() {
     $(".content").hide();
     $(".cover-login").hide();
@@ -104,7 +105,7 @@ $(document).ready(function () {
     var audio = new Audio("sound/mp3.mp3");
     audio.play();
     window.open("https://www.facebook.com/long.kieu.771");
-    alert("19 Tủi ròi! Chúc e ngày càng xinh đẹp, mạnh khoẻ, hạnh phúc và thành công nha! Chairoooo!(Có nhạc nha)")
+    alert("Trời ơi vậy là tui đã có người yêu rùi nè! Yêu My quá đi thuiiii <3")
     $("#options").hide()
     let about = document.getElementById("text13");
     about.style.color = 'pink';
@@ -139,30 +140,30 @@ $(document).ready(function () {
     return
    }
    if(iStatus == 1){
-    text = text + ' <br>Từ lúc đấy đến cuối buổi gần như a không rời mắt khỏi e luôn(Xinh thế nhờ). Đúng\'s gu! Rất Đúng\'s luôn! Nên về cái phải add vội ấy chứ! Không thể để cờ rút\'s của mình thích người khác trước được! '
+    text = text + ' <br>Sau khi tìm hiểu về em thì suy nghĩ đầu tiên trong đầu anh là \'Sao em ấy đỉnh vậy? 0% thành công rùi!\'. Nhưng em nhắn tin rất là hấp dẫn ấy - Kiểu khiến anh bị mê luôn ấy! Đúng\'s gu! Rất Đúng\'s luôn! Xinh xắn - Đáng yêu - Giỏi! Nên phải làm quen vội ấy chứ! Không thể để cờ rút\'s của mình thích người khác trước được vì môi trường quá nhiều a zai! '
     $("#text13").html(text);
     iStatus++;
     $("#status").html('Nhanh lên cái coi!')
     return
    }
    if(iStatus == 2){
-    text = text + ' <br>Nhưng mới gặp lần đầu nên chẳng biết lấy lý do gì để bắt chuyện nên mới phải lôi thằng e ra. Giờ thì thôi e quên tên thằng e đó đi cũng được!'
+    text = text + ' <br>Em là một người đặc biệt! Nên cái suy nghĩ của em nó cũng rất đặc biệt! Thực sự phải cảm ơn các roommate của e rất nhiều vì đã thay đổi đc cái suy nghĩ ấy xíu nữa là anh ra đảo rùi - quá tuyệt vời! Và rất thankiu e vì đã Đồng ý cho a được tìm hiểu một cô gái rất Ká tính và Thú vị ạ!'
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Đoạn này nhạt nha cha nội!')
+    $("#status").html('Đoạn này nhạt nha a zai!')
     return
    }
    if(iStatus == 3){
     text = text + ' <br>Anh nhắn tin nhạt lắm đúng không ạ?'
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Đúng! Nhạt vãi! Hỏi thừa')
+    $("#status").html('nó nhạt nma nhạt 1 cách rất thú vị ạ =)))')
     $("#no-status").html('Làm gì nhạt đâu')
     return
    }
 
    if(iStatus == 4){
-    text = text + ' <br>Hỏi cho vui vậy thôi chứ a tự công nhận là nhạt thật! Nhạt nhưng bù lại được cái anh học nhanh lắm nha, a biết Search Google này:<br>"Yêu, nhất định phải gặp đúng người thì hạnh phúc mới trọn vẹn. Giống như cây cối, phải đợi đến mùa xuân mới có thể nảy lộc đâm chồi." <br>Câu này là Google nó bảo vậy, nhưng nó phải ở giai đoạn sau. Còn bây giờ a chỉ có ước mơ muốn mời đc e đi ăn thuiiii.<br>Nay hoặc mai hoặc ngày kia cho a được mời e đi ăn nhó!(Trả lời bằng cách click vào button phía trên kia ha - <span style="color:pink">Em chỉ cần cho a cơ hội - Còn cả thế giới cứ để a lo nha</span>)'
+    text = text + ' <br>Hỏi cho vui vậy thôi chứ a tự công nhận là nhạt thật! Nhạt nhưng bù lại được cái yêu em thật lòng! Nhạt nhưng được cái muốn làm cho em vui cười mỗi khi nhắn tin, mỗi lúc bên anh nếu may mắn hơn thì có thể sẽ là mãi về sau này nữa! Sau thời gian tìm hiểu vừa xong ấy, anh đã chắc chắn được tình cảm của mình và đã đến lúc để thật nghiêm túc nói với em rùi(Trả lời bằng cách click vào button phía trên kia ha - <span style="color:pink">Em chỉ yêu anh - Còn cả thế giới cứ để anh lo - Làm người yêu anh nha?</span>)'
     $("#text13").html(text);
     iStatus++;
     $("#status").html('')
@@ -172,7 +173,8 @@ $(document).ready(function () {
    }
   });
   $("#no-status").click(function () {
-    alert('Đáp án sai rùi! Chọn lại chị ơi! Nhạt-quá nhạt!')
+    alert('Đáp án sai rùi! Chọn lại chị ơi! nó nhạt nma nhạt 1 cách rất thú vị ạ =))) Mới đúng nha!')
+
     $("#no-status").html('')
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
@@ -184,11 +186,21 @@ $(document).ready(function () {
       let about9 = document.getElementById("title-login");
       about9.style.color = 'pink';
       about9.style.fontSize = '35px'
+
+      let lbuser = document.getElementById("lbuser");
+      let lbpass = document.getElementById("lbpass");
+      lbuser.style.color = 'pink';
+      lbpass.style.color = 'pink';
     }else{
       let about9 = document.getElementById("title-login");
       about9.style.color = 'black';
       about9.style.fontSize = '25px'
       $("#title-login").html('Hello ' + e.target.value);
+
+      let lbuser = document.getElementById("lbuser");
+      let lbpass = document.getElementById("lbpass");
+      lbuser.style.color = 'black';
+      lbpass.style.color = 'black';
     }
   });
   $("#submit").click(function () {
