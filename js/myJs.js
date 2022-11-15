@@ -14,7 +14,7 @@ const textConfig = {
   text12: "Okii lunn <3",
 };
 const imageConfig = [
-  'https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/309834556_3171169749879909_5566148389734582374_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pXev21eu7eMAX_sOzx6&_nc_ht=scontent.fhan5-11.fna&oh=00_AfBqdfqwLX9zEUm7FgFXiUXs8EWWHvzxfN6b30O9_Qx_bQ&oe=636E10B5'
+  'img/mylove.jpg'
   ]
 let index = 0, 
 text = `<span style="color:pink">Anh</span> muốn kể với em một câu chuyện
@@ -54,7 +54,7 @@ $(document).ready(function () {
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
-      imageUrl: "https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/309834556_3171169749879909_5566148389734582374_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pXev21eu7eMAX_sOzx6&_nc_ht=scontent.fhan5-11.fna&oh=00_AfBqdfqwLX9zEUm7FgFXiUXs8EWWHvzxfN6b30O9_Qx_bQ&oe=636E10B5",
+      imageUrl: "img/mylove.jpg",
       imageWidth: 300,
       imageHeight: 300,
       background: '#fff url("img/iput-bg.jpg")',
