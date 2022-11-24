@@ -142,6 +142,9 @@ $(document).ready(function () {
    if(iStatus == 0){
     $("#text13").html(text);
     $("#text133").html(text133);
+    var audio = new Audio("sound/mp3.mp3");
+    audio.play();
+    audio.loop = true;
     iStatus++;
     $("#status").html('')
     return
