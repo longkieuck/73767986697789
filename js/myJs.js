@@ -1,7 +1,7 @@
 const textConfig = {
   text1: "Hello NTMy1",
   text2: "Chuẩn bị đọc thơ này <3",
-  text3: "Đánh giá &Thử việc&",
+  text3: "Tròn 1 tháng ròi nha",
   text4: "Hi vọng mọi điều tốt đẹp và tuyệt vời nhất sẽ đến với em - My crush!",
   text5: "Mơ đi cưng!",
   text6: "Được nha!",
@@ -49,20 +49,11 @@ $(document).ready(function () {
   $("#no").html(textConfig.text5);
   $("#yes").html(textConfig.text6);
   function firstQuestion() {
-    $(".content").hide();
+
     $("#status").hide()
-    Swal.fire({
-      title: textConfig.text1,
-      text: textConfig.text2,
-      imageUrl: "img/mylove.jpg",
-      imageWidth: 300,
-      imageHeight: 300,
-      background: '#fff url("img/iput-bg.jpg")',
-      imageAlt: "Custom image",
-    }).then(function () {
-      $(".content").show(1000);
-      $("#status").show(1000)
-    });
+    var audio = new Audio("sound/kdl.mp3");
+    audio.play();
+    audio.loop = true;
   }
 
   // switch button position
