@@ -53,7 +53,7 @@ $(document).ready(function () {
     $("#status").hide()
     var audio = new Audio("sound/kdl.mp3");
     audio.play();
-    audio.loop = true;
+    // audio.loop = true;
   }
 
   // switch button position
