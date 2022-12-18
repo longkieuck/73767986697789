@@ -51,8 +51,8 @@ $(document).ready(function () {
   function firstQuestion() {
 
     $("#status").hide()
-    var audio = new Audio("sound/kdl.mp3");
-    audio.play();
+    // var audio = new Audio("sound/kdl.mp3");
+    // audio.play();
     // audio.loop = true;
   }
 
@@ -129,6 +129,11 @@ $(document).ready(function () {
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
   
+  $("#pinkboard").click(function () {
+    var audio = new Audio("sound/kdl.mp3");
+    audio.play();
+    audio.loop = true
+  });
   $("#status").click(function () {
    if(iStatus == 0){
     $("#text13").html(text);
