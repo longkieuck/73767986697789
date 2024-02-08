@@ -14,8 +14,8 @@ const textConfig = {
   text12: "Okii lunn <3",
 };
 const imageConfig = [
-  '../img/im1.jpg',
-  '../img/im2.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im1.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im2.jpg',
   ]
 let index = 0, text = 'Web này được tạo ra để lưu lại những kỉ niệm của chúng mình. 2024 Hai đứa sẽ có thật nhiều những bức ảnh cùng nhau em nha.';
 let iStatus= 0;
