@@ -1,10 +1,10 @@
 const textConfig = {
-  text1: "Chào Em(Đúng's gu)",
-  text2: "Happy Birthday nhó! Cái web đầu tiên anh làm gấp vậy hơi bất ổn thông kảm nha! Gét gô!",
-  text3: "Web page này là dành cho em. Người con gái Đúng's gu ._.",
-  text4: "Hi vọng mọi điều tốt đẹp và tuyệt vời nhất sẽ đến với em - Cô bé ",
-  text5: "Mơ đi cưng!",
-  text6: "Được nha!",
+  text1: "Hello em iu ạ!",
+  text2: "Cái web này a làm nhanh trong lúc nhắn tin với e tối hôm qua. Cùng xem có gì nha babe <3",
+  text3: "Web page này để chúc mừng năm mới em iu ạ!",
+  text4: "Chúc em cùng đại gia đình sẽ có MỘT NĂM MỚI BÌNH AN",
+  text5: "Để xem xét!",
+  text6: "Em đồng ý!",
   text7: "lí do cậu thích tớ đi :vvvv",
   text8: "Gửi cho tớ <3",
   text9: "Vì cậu đẹp try vlllll",
@@ -14,18 +14,10 @@ const textConfig = {
   text12: "Okii lunn <3",
 };
 const imageConfig = [
-  'https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/307848221_202239822225028_5962759610457268602_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CsrBjjcnAysAX8RYJ3I&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-2.fna&oh=00_AT9CxCv2jrc-fEXJB4G5Tl1InyCykNBShFeg11iq2dXySw&oe=634FA438',
-  'https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6',
-  'https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/305571564_200283055754038_581949479096944282_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=p9ZU0X3nXHEAX_p62EQ&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-2.fna&oh=00_AT-ZnGw9yn_2kWH0Pr8RD_6ScgDqrEN6ge2YTW1homJ-Kg&oe=63507B9B',
-  'https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/299147901_194002643048746_2170957377312600884_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=tkqanHjDmBIAX8db4Um&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8DVe1W5_6YfIBDOjtef4JyANzBBosf1erSVqVPMeUreA&oe=6350EDB1',
-  'https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/297881189_191696953279315_2185894982705182956_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=EUDwZeQeReMAX9ehtoW&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8LL9G1Pa7SsaXG-kZ9vMjQmDg9LpC-jmjaFb8D0s10jg&oe=634FF833',
-  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img5.bmp',
-  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img6.bmp',
-  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img7.bmp',
-  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img8.bmp',
-  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/img9.bmp',
+  '../img/im1.jpg',
+  '../img/im2.jpg',
   ]
-let index = 0, text = 'Lần đầu anh gặp Em là 6 giờ 20p(độ lệch chuẩn 5p) ngày 10/10/2022 Xinh thực sự! Nhưng anh nghĩ là xinh như vậy kiểu gì cũng có người iêu ròi. Sau khi nghe quả giới thiệu song thì! thực sự để mà nói là không biết đây có phải là bước đầu của sự tuyệt vời mà ô trời gửi tặng tui không!(Vui hết sức).';
+let index = 0, text = 'Web này được tạo ra để lưu lại những kỉ niệm của chúng mình. 2024 Hai đứa sẽ có thật nhiều những bức ảnh cùng nhau em nha.';
 let iStatus= 0;
 $(document).ready(function () {
   // process bar
@@ -41,8 +33,7 @@ $(document).ready(function () {
   $("#text3").html(textConfig.text3);
 
   //Tính tuổi
-  let yearOld = new Date().getFullYear() - new Date(2003,1,1).getFullYear();
-  $("#text4").html(textConfig.text4 + yearOld + ' tủi!');
+  $("#text4").html(textConfig.text4);
   $("#no").html(textConfig.text5);
   $("#yes").html(textConfig.text6);
 
@@ -52,7 +43,7 @@ $(document).ready(function () {
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
-      imageUrl: "https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/307848221_202239822225028_5962759610457268602_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CsrBjjcnAysAX8RYJ3I&tn=cg8HkFnB7FPP64vZ&_nc_ht=scontent.fhan5-8.fna&oh=00_AT9ojg45TNbmRIqwycl9U_m5f5Tbcp8VlCmoSHNFj0NKdg&oe=634FA438",
+      imageUrl: "https://zpsocial-f54-org.zadn.vn/3739e069f0501e0e4741.jpg",
       imageWidth: 300,
       imageHeight: 300,
       background: '#fff url("img/iput-bg.jpg")',
@@ -101,7 +92,7 @@ $(document).ready(function () {
   // generate text in input
   function loopImage() {
     index++;
-    if(index > 9) index = 0;
+    if(index > 1) index = 0;
     document.getElementById("img").src = imageConfig[index]
   }
 
@@ -110,7 +101,6 @@ $(document).ready(function () {
     var audio = new Audio("sound/mp3.mp3");
     audio.play();
     window.open("https://www.facebook.com/long.kieu.771");
-    alert("19 Tủi ròi! Chúc e ngày càng xinh đẹp, mạnh khoẻ, hạnh phúc và thành công nha! Chairoooo!(Có nhạc nha)")
     $("#options").hide()
     let about = document.getElementById("text13");
     about.style.color = 'pink';
@@ -125,7 +115,7 @@ $(document).ready(function () {
   // show popup
   $("#next").click(function () {
     index++;
-    if(index > 9) index = 0;
+    if(index > 1) index = 0;
     document.getElementById("img").src = imageConfig[index]
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
@@ -141,34 +131,33 @@ $(document).ready(function () {
    if(iStatus == 0){
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Tiếp này')
+    $("#status").html('Click me!')
     return
    }
    if(iStatus == 1){
-    text = text + ' <br>Từ lúc đấy đến cuối buổi gần như a không rời mắt khỏi e luôn(Xinh thế nhờ). Đúng\'s gu! Rất Đúng\'s luôn! Nên về cái phải add vội ấy chứ! Không thể để cờ rút\'s của mình thích người khác trước được! '
+    text = text + ' <br>Nhưng mà chắc chắn là sẽ không thể add thêm những bức ảnh vào đây được nếu như em say NO.'
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Nhanh lên cái coi!')
+    $("#status").html('Click me!')
     return
    }
    if(iStatus == 2){
-    text = text + ' <br>Nhưng mới gặp lần đầu nên chẳng biết lấy lý do gì để bắt chuyện nên mới phải lôi thằng e ra. Giờ thì thôi e quên tên thằng e đó đi cũng được!'
+    text = text + ' <br>Khi em đọc tới đoạn này thì cũng tới 2024 rùi.'
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Đoạn này nhạt nha cha nội!')
+    $("#status").html('Click me!')
     return
    }
    if(iStatus == 3){
-    text = text + ' <br>Anh nhắn tin nhạt lắm đúng không ạ?'
+    text = text + ' <br>Chúc em iu sẽ luôn xinh đẹp này, kiếm nhiều siền này, ngày càng yêu đời hơn nữa nha.<br>Chúc bố/mẹ luôn dồi dào sức khoẻ, an khang, thịnh vượng ạ!<br>Chúc Dương/Chi chăm ngoan học giỏi và sẽ đạt được kết quả tốt nhất luôn!'
     $("#text13").html(text);
     iStatus++;
-    $("#status").html('Đúng! Nhạt vãi! Hỏi thừa')
-    $("#no-status").html('Làm gì nhạt đâu')
+    $("#status").html('Click me!')
     return
    }
 
    if(iStatus == 4){
-    text = text + ' <br>Hỏi cho vui vậy thôi chứ a tự công nhận là nhạt thật! Nhạt nhưng bù lại được cái anh học nhanh lắm nha, a biết Search Google này:<br>"Yêu, nhất định phải gặp đúng người thì hạnh phúc mới trọn vẹn. Giống như cây cối, phải đợi đến mùa xuân mới có thể nảy lộc đâm chồi." <br>Câu này là Google nó bảo vậy, nhưng nó phải ở giai đoạn sau. Còn bây giờ a chỉ có ước mơ muốn mời đc e đi ăn thuiiii.<br>Nay hoặc mai hoặc ngày kia cho a được mời e đi ăn nhó!(Trả lời bằng cách click vào button phía trên kia ha - <span style="color:pink">Em chỉ cần cho a cơ hội - Còn cả thế giới cứ để a lo nha</span>)'
+    text = text + ' <br>Sau này anh tỏ tình thì em sẽ đồng ý chứ?'
     $("#text13").html(text);
     iStatus++;
     $("#status").html('')
@@ -177,16 +166,11 @@ $(document).ready(function () {
     return
    }
   });
-  $("#no-status").click(function () {
-    alert('Đáp án sai rùi! Chọn lại chị ơi! Nhạt-quá nhạt!')
-    $("#no-status").html('')
-    // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
-  });
 
   $(document).on('input', '.username', function(e){
     
-    if(e.target.value.toLowerCase() == 'my crush'){
-      $("#title-login").html('Happy Birthday ' + e.target.value+'<br>Best wish for you <3');
+    if(e.target.value.toLowerCase() == 'my love'){
+      $("#title-login").html('Happy New Year Ngọc Ánh');
       let about9 = document.getElementById("title-login");
       about9.style.color = 'pink';
       about9.style.fontSize = '35px'
@@ -194,13 +178,13 @@ $(document).ready(function () {
       let about9 = document.getElementById("title-login");
       about9.style.color = 'black';
       about9.style.fontSize = '25px'
-      $("#title-login").html('Happy Birthday ' + e.target.value);
+      $("#title-login").html('Happy New Year ' + e.target.value);
     }
   });
   $("#submit").click(function () {
    let username = document.getElementById('username').value;
    let password = document.getElementById('password').value; 
-   if(username.toLowerCase() == 'my crush' && password.toLowerCase() == 'happybirthday'){
+   if(username.toLowerCase() == 'my love' && password.toLowerCase() == '171001'){
     $(".content").show();
     $(".cover-login").hide();
    }else{

@@ -26,7 +26,7 @@
   /* height: 100vh; */
   z-index: 0;
   background-repeat: no-repeat;
-  background-image: url(../img/puung3.jpg);
+  background-image: url(../img/123.jpg);
   background-size: cover;
   background-position: 50%;
   -webkit-filter: blur(4px);
@@ -49,7 +49,7 @@ header h4 {
   text-align: center;
 }
 .text{
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Pacifico';
 }
 .status{
@@ -68,7 +68,6 @@ header h4 {
   width: 400px;
   min-width: 400px;
   min-height: 400px;
-  margin-left: -160px;
 }
 .cover-image{
   width: 100%;
