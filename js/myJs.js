@@ -1,7 +1,7 @@
 const textConfig = {
-  text1: "Hello em iu ạ!",
-  text2: "Cái web này a làm nhanh trong lúc nhắn tin với e tối hôm qua. Cùng xem có gì nha babe <3",
-  text3: "Web page này để chúc mừng năm mới em iu ạ!",
+  text1: "App này dùng để update tình yêu của chúng mình ạ",
+  text2: "",
+  text3: "Đếm ngày iu nhau",
   text4: "Chúc em cùng đại gia đình sẽ có MỘT NĂM MỚI BÌNH AN",
   text5: "Để xem xét!",
   text6: "Em đồng ý!",
@@ -16,6 +16,8 @@ const textConfig = {
 const imageConfig = [
   'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im1.jpg',
   'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im2.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im3.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im4.jpg',
   ]
 let index = 0, text = 'Web này được tạo ra để lưu lại những kỉ niệm của chúng mình. 2024 Hai đứa sẽ có thật nhiều những bức ảnh cùng nhau em nha.';
 let iStatus= 0;
@@ -29,11 +31,17 @@ $(document).ready(function () {
       overflow: "visible",
     });
   }, 600);
-  
+  setInterval(() => {
+    loopImage()
+  }, 2000);
   $("#text3").html(textConfig.text3);
+  let firstDate  = new Date("02/14/2024");
+  let secondDate = new Date();
+  const oneDay = 24 * 60 * 60 * 1000;
+  var ndays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
 
-  //Tính tuổi
-  $("#text4").html(textConfig.text4);
+  //Tính tgian
+  $("#text4").html(ndays + ' Ngày');
   $("#no").html(textConfig.text5);
   $("#yes").html(textConfig.text6);
 
@@ -43,7 +51,7 @@ $(document).ready(function () {
     Swal.fire({
       title: textConfig.text1,
       text: textConfig.text2,
-      imageUrl: "https://zpsocial-f54-org.zadn.vn/3739e069f0501e0e4741.jpg",
+      imageUrl: "https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im1.jpg",
       imageWidth: 300,
       imageHeight: 300,
       background: '#fff url("img/iput-bg.jpg")',
@@ -92,7 +100,7 @@ $(document).ready(function () {
   // generate text in input
   function loopImage() {
     index++;
-    if(index > 1) index = 0;
+    if(index > 3) index = 0;
     document.getElementById("img").src = imageConfig[index]
   }
 
@@ -108,83 +116,27 @@ $(document).ready(function () {
     about1.style.color = 'pink';
     let about2 = document.getElementById("text4");
     about2.style.color = 'pink';
-    setInterval(() => {
-      loopImage()
-    }, 2000);
   });
   // show popup
   $("#next").click(function () {
     index++;
-    if(index > 1) index = 0;
+    if(index > 3) index = 0;
     document.getElementById("img").src = imageConfig[index]
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
 
   $("#back").click(function () {
     index--;
-    if(index < 0) index = 1;
+    if(index < 0) index = 3;
     document.getElementById("img").src = imageConfig[index]
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
   
-  $("#status").click(function () {
-   if(iStatus == 0){
-    $("#text13").html(text);
-    iStatus++;
-    $("#status").html('Click me!')
-    return
-   }
-   if(iStatus == 1){
-    text = text + ' <br>Nhưng mà chắc chắn là sẽ không thể add thêm những bức ảnh vào đây được nếu như em say NO.'
-    $("#text13").html(text);
-    iStatus++;
-    $("#status").html('Click me!')
-    return
-   }
-   if(iStatus == 2){
-    text = text + ' <br>Khi em đọc tới đoạn này thì cũng tới 2024 rùi.'
-    $("#text13").html(text);
-    iStatus++;
-    $("#status").html('Click me!')
-    return
-   }
-   if(iStatus == 3){
-    text = text + ' <br>Chúc em iu sẽ luôn xinh đẹp này, kiếm nhiều siền này, ngày càng yêu đời hơn nữa nha.<br>Chúc bố/mẹ luôn dồi dào sức khoẻ, an khang, thịnh vượng ạ!<br>Chúc Dương/Chi chăm ngoan học giỏi và sẽ đạt được kết quả tốt nhất luôn!'
-    $("#text13").html(text);
-    iStatus++;
-    $("#status").html('Click me!')
-    return
-   }
 
-   if(iStatus == 4){
-    text = text + ' <br>Sau này anh tỏ tình thì em sẽ đồng ý chứ?'
-    $("#text13").html(text);
-    iStatus++;
-    $("#status").html('')
-    $("#no-status").html('')
-    $("#options").show()
-    return
-   }
-  });
-
-  $(document).on('input', '.username', function(e){
-    
-    if(e.target.value.toLowerCase() == 'my love'){
-      $("#title-login").html('Happy New Year Ngọc Ánh');
-      let about9 = document.getElementById("title-login");
-      about9.style.color = 'pink';
-      about9.style.fontSize = '35px'
-    }else{
-      let about9 = document.getElementById("title-login");
-      about9.style.color = 'black';
-      about9.style.fontSize = '25px'
-      $("#title-login").html('Happy New Year ' + e.target.value);
-    }
-  });
   $("#submit").click(function () {
    let username = document.getElementById('username').value;
    let password = document.getElementById('password').value; 
-   if(username.toLowerCase() == 'my love' && password.toLowerCase() == '171001'){
+   if(username.toLowerCase() == 'my love' && password.toLowerCase() == '017123'){
     $(".content").show();
     $(".cover-login").hide();
    }else{
