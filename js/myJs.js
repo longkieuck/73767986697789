@@ -18,7 +18,12 @@ const imageConfig = [
   'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im2.jpg',
   'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im3.jpg',
   'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im4.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im5.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im6.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im7.jpg',
+  'https://raw.githubusercontent.com/longkieuck/birthday_gift/master/img/im8.jpg',
   ]
+let IMAGE_LENGTH = imageConfig.length;
 let index = 0, text = 'Web này được tạo ra để lưu lại những kỉ niệm của chúng mình. 2024 Hai đứa sẽ có thật nhiều những bức ảnh cùng nhau em nha.';
 let iStatus= 0;
 $(document).ready(function () {
@@ -100,7 +105,7 @@ $(document).ready(function () {
   // generate text in input
   function loopImage() {
     index++;
-    if(index > 3) index = 0;
+    if(index > IMAGE_LENGTH - 1) index = 0;
     document.getElementById("img").src = imageConfig[index]
   }
 
@@ -120,14 +125,14 @@ $(document).ready(function () {
   // show popup
   $("#next").click(function () {
     index++;
-    if(index > 3) index = 0;
+    if(index > IMAGE_LENGTH - 1) index = 0;
     document.getElementById("img").src = imageConfig[index]
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
 
   $("#back").click(function () {
     index--;
-    if(index < 0) index = 3;
+    if(index < 0) index = IMAGE_LENGTH - 1;
     document.getElementById("img").src = imageConfig[index]
     // $("#next").attr('src','https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/306834128_201831088932568_29213235053674702_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=IInDuFVUkTsAX8PsmJE&_nc_ht=scontent.fhan5-8.fna&oh=00_AT_p-vPTpoz5wRBgHZXuv2RSqS7PHTJ6QvK9_ITC31otag&oe=635047B6');
   });
